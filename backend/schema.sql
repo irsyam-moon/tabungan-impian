@@ -1,0 +1,17 @@
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(10) NOT NULL DEFAULT 'USER'
+);
+
+CREATE TABLE goals (
+  id SERIAL PRIMARY KEY,
+  user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  name VARCHAR(150) NOT NULL,
+  image_url TEXT NOT NULL,
+  image_public_id TEXT NOT NULL,
+  target_price BIGINT NOT NULL,
+  saved_amount BIGINT NOT NULL DEFAULT 0
+);
