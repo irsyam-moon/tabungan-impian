@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang='id'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Masuk - Tabungan Impian</title>
+  <link href='css/output.css' rel='stylesheet'>
+</head>
+<body class='bg-stone-100 font-serif'>
+  <main class='grid min-h-screen place-items-center p-6'>
+    <form id='auth-form' data-mode='login' class='w-full max-w-sm space-y-3 border-2 border-black bg-white p-6'>
+      <h2 class='text-2xl font-bold'>Masuk</h2>
+      <input name='email' type='email' placeholder='Email' required class='field'>
+      <input name='password' type='password' placeholder='Password' required class='field'>
+      <p id='error' class='font-mono text-sm text-red-600'></p>
+      <button class='btn w-full'>Masuk</button>
+      <p class='font-mono text-xs'>Belum punya akun? <a href='register.html' class='underline'>Daftar</a></p>
+    </form>
+  </main>
+  <script src='js/api.js'></script>
+  <script src='js/auth.js'></script>
+</body>
+</html>

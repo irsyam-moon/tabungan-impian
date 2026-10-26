@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  
+  "scripts": {
+  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --watch",
+  "build": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --minify",
+  "serve": "npx --yes serve public -l 5173"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

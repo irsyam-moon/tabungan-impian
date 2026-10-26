@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@source '../public';
+
+@theme {
+  --color-money: #1f8a4c;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+}
+
+@layer components {
+  .field {
+    @apply w-full border-[1.5px] border-black bg-stone-100 p-2.5 font-mono text-sm focus:outline-2 focus:outline-money;
+  }
+  .btn {
+    @apply border-2 border-black bg-black px-4 py-2 font-mono text-xs font-bold uppercase text-white hover:border-money hover:bg-money;
+  }
+  .btn-ghost {
+    @apply border-2 border-black px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-black hover:text-white;
+  }
+}

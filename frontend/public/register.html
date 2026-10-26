@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang='id'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Daftar - Tabungan Impian</title>
+  <link href='css/output.css' rel='stylesheet'>
+</head>
+<body class='bg-stone-100 font-serif'>
+  <main class='grid min-h-screen place-items-center p-6'>
+    <form id='auth-form' data-mode='register' class='w-full max-w-sm space-y-3 border-2 border-black bg-white p-6'>
+      <h2 class='text-2xl font-bold'>Daftar</h2>
+      <input name='name' placeholder='Nama' required class='field'>
+      <input name='email' type='email' placeholder='Email' required class='field'>
+      <input name='password' type='password' placeholder='Password (min. 6 karakter)' required class='field'>
+      <p id='error' class='font-mono text-sm text-red-600'></p>
+      <button class='btn w-full'>Daftar</button>
+      <p class='font-mono text-xs'>Sudah punya akun? <a href='login.html' class='underline'>Masuk</a></p>
+    </form>
+  </main>
+  <script src='js/api.js'></script>
+  <script src='js/auth.js'></script>
+</body>
+</html>

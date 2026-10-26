@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='id'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Target Saya - Tabungan Impian</title>
+  <link href='css/output.css' rel='stylesheet'>
+</head>
+<body class='min-h-screen bg-stone-100 font-serif'>
+  <header class='sticky top-0 flex items-center justify-between border-b-2 border-black bg-stone-100 px-5 py-3'>
+    <b class='text-xl'>Tabungan Impian</b>
+    <div class='flex items-center gap-3 font-mono text-xs'>
+      <span id='user-name'></span>
+      <button id='logout' class='btn-ghost'>Keluar</button>
+    </div>
+  </header>
+
+  <main class='mx-auto max-w-5xl p-5'>
+    <div class='mb-4 flex items-end justify-between'>
+      <h2 class='text-3xl font-bold'>Target Saya</h2>
+      <button id='btn-add' class='btn'>+ Tambah</button>
+    </div>
+    <p class='mb-6 border-2 border-black bg-white p-4 font-mono'>Total ditabung: <b id='total'>Rp 0</b></p>
+    <div id='list'></div>
+  </main>
+
+  <div id='modal' class='fixed inset-0 hidden place-items-center bg-black/60 p-5'>
+    <form id='goal-form' class='w-full max-w-sm space-y-3 border-2 border-black bg-white p-6'>
+      <h2 id='modal-title' class='text-2xl font-bold'>Tambah Target</h2>
+      <input name='image' type='file' accept='image/*' class='field'>
+      <input name='name' placeholder='Nama barang' required class='field'>
+      <input name='target_price' type='number' min='1' placeholder='Harga (Rp)' required class='field'>
+      <div class='flex gap-2 pt-2'>
+        <button type='button' id='btn-cancel' class='btn-ghost flex-1'>Batal</button>
+        <button class='btn flex-1'>Simpan</button>
+      </div>
+    </form>
+  </div>
+
+  <script src='js/api.js'></script>
+  <script src='js/home.js'></script>
+</body>
+</html>
