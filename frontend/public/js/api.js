@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://tabungan-impian.vercel.app/api';
 
 async function api(path, { method = 'GET', body, form } = {}) {
   const headers = {};
